@@ -1,5 +1,5 @@
 import Link from "next/link";
-import MobileMenu from "@/component/MobileMenu";
+import MobileMenu from "../components/MobileMenu";
 
 const Navbar = () => {
     return (
