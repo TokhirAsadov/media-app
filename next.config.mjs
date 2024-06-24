@@ -7,5 +7,3 @@ const nextConfig = {
 };
 
 export default nextConfig;
-
-//check4
