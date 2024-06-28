@@ -1,4 +1,4 @@
-import ProfileCard from "@/components/ProfileCard";
+import ProfileCard from "@/components/leftMenu/ProfileCard";
 import Link from "next/link";
 import Image from "next/image";
 import Ad from "@/components/Ad";
