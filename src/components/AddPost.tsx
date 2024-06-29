@@ -1,6 +1,12 @@
 import Image from "next/image";
+import prisma from "@/lib/client";
+import {auth} from "@clerk/nextjs/server";
 
 const AddPost = () =>{
+
+    const {userId} = auth();
+
+
     return (
         <div className={'p-4 bg-white shadow-md rounded-lg flex gap-4 justify-between text-sm'}>
             {/*    AVATAR   */}
@@ -8,10 +14,15 @@ const AddPost = () =>{
             {/*    POST    */}
             <div className="flex-1">
                 {/*TEXT INPUT*/}
-                <div className="flex gap-4">
-                    <textarea placeholder={"What's on your mind?"} className={"p-2 flex-1 bg-slate-100 rounded-lg"}></textarea>
+                <form action="" className="flex gap-4">
+                    <textarea
+                        placeholder={"What's on your mind?"}
+                        className={"p-2 flex-1 bg-slate-100 rounded-lg"}
+                        name={"desc"}
+                    ></textarea>
                     <Image src={"/emoji.png"} alt={""} width={20} height={20} className="w-5 h-5 cursor-pointer self-end" />
-                </div>
+                    <button>Send</button>
+                </form>
                 {/*POST OPTIONS*/}
                 <div className="flex items-center gap-4 mt-4 text-gray-400 flex-wrap">
                     <div className="flex items-center gap-2 cursor-pointer">
